@@ -41,7 +41,14 @@ export default function Searchweather() {
       emoji = "fa-smog";
     }
   } else {
-    return <div>..loading</div>;
+    return (
+      <div className="row justify-content-center">
+        Error
+        <p className=" lead fw-border mb-1">
+          Please relaod the site And Enter Correct City Name
+        </p>
+      </div>
+    );
   }
 
   let temp = (data.main.temp - 273.15).toFixed(2);
